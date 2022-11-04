@@ -1,4 +1,4 @@
-module FA (a, b, cin, g, p, s);
+module PFA (a, b, cin, g, p, s);
     input a, b, cin;
     output g, p, s;
 
@@ -35,7 +35,7 @@ module CLA_4bit (A, B, cin, GG, PG, sum);
     genvar i;
     generate
         for (i=0; i<4; i=i+1) 
-            FA fa_inst(A[i], B[i], C[i], G[i], P[i], sum[i]);
+            PFA fa_inst(A[i], B[i], C[i], G[i], P[i], sum[i]);
     endgenerate
 
     LCU lcu(P, G, cin, C, PG, GG);
@@ -58,12 +58,11 @@ module CLA_16bit (A, B, cin, GG, PG, sum);
     LCU lcu(P, G, cin, C, PG, GG);
 endmodule
 
-module CLA_32bit(A, B, cin, sum, cout,OF);
+module CLA_32bit(A, B, cin, sum, cout, OF);
     input [31:0] A, B;
     input cin;
-    output cout;
+    output cout, OF;
     output [31:0] sum;
-    output OF;
 
     wire [1:0] P, G, C;
     assign C[0] = cin;
