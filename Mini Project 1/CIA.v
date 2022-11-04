@@ -20,7 +20,7 @@ module Increment (prev_carry, cur_carry, cout, sumin, sumout);
     genvar i;
     generate
         for (i = 0; i < 8; i = i+1) begin
-            HA(sumin[i], c[i], sumout[i], c[i+1]);
+            HA ha(sumin[i], c[i], sumout[i], c[i+1]);
         end
     endgenerate
 
@@ -36,13 +36,13 @@ module CIA(A, B, cin, sum, cout);
     wire [3:0] propagate_carry, cur_carry;
     wire [23:0] s;
 
-    ripple_adder #(8) RCA(A[7:0], B[7:0], {sum[7:0], cur_carry[0]});
+    ripple_adder #(8) RCA(A[7:0], B[7:0], {cur_carry[0], sum[7:0]});
     assign propagate_carry[0] = cur_carry[0];
 
     genvar i;
     generate
         for (i = 1; i < 4; i = i+1) begin
-            ripple_adder #(8) RCA(A[8*(i+1)-1: 8*i], B[8*(i+1)-1: 8*i], {s[8*i-1: 8*(i-1)], cur_carry[i]});
+            ripple_adder #(8) RCA(A[8*(i+1)-1: 8*i], B[8*(i+1)-1: 8*i], {cur_carry[i], s[8*i-1: 8*(i-1)]});
             Increment inc(propagate_carry[i-1], cur_carry[i], propagate_carry[i], s[8*i-1: 8*(i-1)], sum[8*(i+1)-1: 8*i]);
         end
     endgenerate
