@@ -5,7 +5,8 @@ module ripple_adder
   (
    input [WIDTH-1:0] i_add1,
    input [WIDTH-1:0] i_add2,
-   output [WIDTH:0]  o_result
+   output [WIDTH:0]  o_result,
+   output OF
    );
 
 
@@ -16,7 +17,7 @@ module ripple_adder
   assign o_result[WIDTH]=w_C[WIDTH];
 
   // Create the Full Adders
-  genvar             ii;
+  genvar ii;
   generate
     for (ii=0; ii<WIDTH; ii=ii+1) 
       begin
@@ -30,4 +31,7 @@ module ripple_adder
               );
       end
   endgenerate
+
+  assign OF = ((o_result[WIDTH-1]^i_add1[WIDTH-1])&(~(i_add1[WIDTH-1]^i_add2[WIDTH-1])));
+
 endmodule

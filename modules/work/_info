@@ -1,0 +1,509 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vadderPlus
+!s110 1667592170
+!i10b 1
+!s100 5PJ40Ni2L1P@fKLE07Teh1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Id;Tg[0U^Ia0ce7Fgg5]>B0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/Material/Third Year/First term/VLSI/VLSI-Project/modules
+Z3 w1667587299
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/adderPlus.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/adderPlus.v
+!i122 48
+L0 1 11
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1667592170.000000
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/adderPlus.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/adderPlus.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+nadder@plus
+vCarry_bypass_4bits
+Z7 !s110 1667592171
+!i10b 1
+!s100 kOKOiD29HIXORNQ7dIVd42
+R0
+IYeB;_7LlVUlFKY?8:eAF70
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/carry_ByPass_adder.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/carry_ByPass_adder.v
+!i122 49
+Z8 L0 1 25
+R4
+r1
+!s85 0
+31
+Z9 !s108 1667592171.000000
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/carry_ByPass_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/carry_ByPass_adder.v|
+!i113 1
+R5
+R6
+n@carry_bypass_4bits
+vcarry_select_adder
+Z10 !s110 1667592172
+!i10b 1
+!s100 ThR9d?hHMbONI;9?Z3lO]3
+R0
+IROE`56cfJL5W6O?e_T=R@3
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CarrySelectAdder.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CarrySelectAdder.v
+!i122 52
+L0 1 37
+R4
+r1
+!s85 0
+31
+Z11 !s108 1667592172.000000
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CarrySelectAdder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CarrySelectAdder.v|
+!i113 1
+R5
+R6
+vCarry_Skip_4bits
+R7
+!i10b 1
+!s100 NEeSIoE?TNc[K@=E]cAVZ1
+R0
+INJh;=d6a^:Y@nN_YJPJkC3
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/Carry_Skip_adder.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/Carry_Skip_adder.v
+!i122 50
+R8
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/Carry_Skip_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/Carry_Skip_adder.v|
+!i113 1
+R5
+R6
+n@carry_@skip_4bits
+vCBPA
+R10
+!i10b 1
+!s100 Of3?^a>K@=cI1UaHC]W^d3
+R0
+IDn0oc934c[S<C;nH0XaAg0
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CBPA.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CBPA.v
+!i122 53
+L0 1 22
+R4
+r1
+!s85 0
+31
+R11
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CBPA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CBPA.v|
+!i113 1
+R5
+R6
+n@c@b@p@a
+vCIA
+Z12 !s110 1667592173
+!i10b 1
+!s100 n:HzfoH;[8]B]?3K7<B4L0
+R0
+IihNHcjiZ[]>Li`9EKSJPY3
+R1
+R2
+R3
+Z13 8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CIA.v
+Z14 FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CIA.v
+!i122 54
+L0 30 26
+R4
+r1
+!s85 0
+31
+R11
+Z15 !s107 full_adder.v|ripple_adder.v|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CIA.v|
+Z16 !s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CIA.v|
+!i113 1
+R5
+R6
+n@c@i@a
+vCLA_16bit
+R12
+!i10b 1
+!s100 8lRDQ[j2NaDna2YPMGdRB0
+R0
+I1a4>Xe]SEAfX_?0Z]_3El2
+R1
+R2
+Z17 w1667592148
+Z18 8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CLA.v
+Z19 FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CLA.v
+!i122 55
+L0 44 16
+R4
+r1
+!s85 0
+31
+Z20 !s108 1667592173.000000
+Z21 !s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CLA.v|
+Z22 !s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CLA.v|
+!i113 1
+R5
+R6
+n@c@l@a_16bit
+vCLA_32bit
+R12
+!i10b 1
+!s100 0PJO5T70T5^KW<hkXck@?1
+R0
+Ih:z4UU8_>`SL<]aJ0j6J11
+R1
+R2
+R17
+R18
+R19
+!i122 55
+L0 61 16
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+n@c@l@a_32bit
+vCLA_4bit
+R12
+!i10b 1
+!s100 z0Ff;j4DiXJBGo:c>nUN61
+R0
+IgUYS?iRWf5GTa^1IRE?7T0
+R1
+R2
+R17
+R18
+R19
+!i122 55
+L0 27 16
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+n@c@l@a_4bit
+vCSA
+R12
+!i10b 1
+!s100 cn<XHIG5c:<a9HY2T@dMM3
+R0
+I_fa_FZ4iff51PlcBgeYfD3
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CSA.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CSA.v
+!i122 56
+L0 1 21
+R4
+r1
+!s85 0
+31
+R20
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CSA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/CSA.v|
+!i113 1
+R5
+R6
+n@c@s@a
+vFA
+Z23 !s110 1667592174
+!i10b 1
+!s100 S7mRZQG@Z<GCESUn[=c943
+R0
+I5dB]GW3zh3KX`Zl0i?VDb1
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/FA.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/FA.v
+!i122 57
+L0 1 14
+R4
+r1
+!s85 0
+31
+Z24 !s108 1667592174.000000
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/FA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/FA.v|
+!i113 1
+R5
+R6
+n@f@a
+vfull_adder
+Z25 !s110 1667592175
+!i10b 1
+!s100 Nf`>a7ik=njTlYH=VYkc:1
+R0
+I@SMXX7dJVEAlSji5Cd1od1
+R1
+R2
+R3
+8full_adder.v
+Ffull_adder.v
+!i122 62
+Z26 L0 1 12
+R4
+r1
+!s85 0
+31
+Z27 !s108 1667592175.000000
+Z28 !s107 full_adder.v|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/ripple_adder.v|
+Z29 !s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/ripple_adder.v|
+!i113 1
+R5
+R6
+vfulladder
+R23
+!i10b 1
+!s100 E=lng6TL[<i92K7Z]e2WW2
+R0
+I^ZZjX7j=jMYTUIEmGgBTn2
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/fulladder.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/fulladder.v
+!i122 59
+Z30 L0 1 7
+R4
+r1
+!s85 0
+31
+R24
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/fulladder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/fulladder.v|
+!i113 1
+R5
+R6
+vHA
+R12
+!i10b 1
+!s100 nWWc=JLXT7l2B9`Z:Xnma0
+R0
+IGXF<j27lQZnD77o>k<2hh3
+R1
+R2
+R3
+R13
+R14
+!i122 54
+L0 3 7
+R4
+r1
+!s85 0
+31
+R11
+R15
+R16
+!i113 1
+R5
+R6
+n@h@a
+vIncrement
+R12
+!i10b 1
+!s100 =E]>1S_b_<H]bAAjKOAnF2
+R0
+IeT5:?kP:JafOK8`^ALMF?3
+R1
+R2
+R3
+R13
+R14
+!i122 54
+L0 11 18
+R4
+r1
+!s85 0
+31
+R11
+R15
+R16
+!i113 1
+R5
+R6
+n@increment
+vLCU
+R12
+!i10b 1
+!s100 9=N6;O=RKhSaE2H4UinaF1
+R0
+Ik?GYmTkK8DT]?bT6KD?iZ1
+R1
+R2
+R17
+R18
+R19
+!i122 55
+L0 11 15
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+n@l@c@u
+vmultiplexer2
+R25
+!i10b 1
+!s100 E45bff;^dOlLMB@z:[kRD3
+R0
+Ick8EobmcAJaRHlKPVnN^b2
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/multiplexer2.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/multiplexer2.v
+!i122 60
+R26
+R4
+r1
+!s85 0
+31
+R27
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/multiplexer2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/multiplexer2.v|
+!i113 1
+R5
+R6
+vMux_2x1
+R25
+!i10b 1
+!s100 T6JO3>`6PJKcZiP37^Ro>1
+R0
+I6GgIe8JFdG?]K@lV9MQP23
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/MUX2x1.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/MUX2x1.v
+!i122 61
+R30
+R4
+r1
+!s85 0
+31
+R27
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/MUX2x1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/MUX2x1.v|
+!i113 1
+R5
+R6
+n@mux_2x1
+vPFA
+R12
+!i10b 1
+!s100 UlCknFIV34YbInYKb6:l61
+R0
+I<SADL??ne<GoelRM30K:;3
+R1
+R2
+R17
+R18
+R19
+!i122 55
+L0 1 9
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+n@p@f@a
+vripple_adder
+R25
+!i10b 1
+!s100 co>I?VW5<?bUY1O9nIn;S1
+R0
+IiE8=C64V01`WVE2RFON_k3
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/ripple_adder.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/ripple_adder.v
+!i122 62
+L0 3 35
+R4
+r1
+!s85 0
+31
+R27
+R28
+R29
+!i113 1
+R5
+R6
+vtestbench
+R25
+!i10b 1
+!s100 7_5[9z7[[hgR:k=]22H^F2
+R0
+IPMnM[1j96^TZT=15BhSjG0
+R1
+R2
+R3
+8E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/testbench.v
+FE:/Material/Third Year/First term/VLSI/VLSI-Project/modules/testbench.v
+!i122 63
+L0 1 141
+R4
+r1
+!s85 0
+31
+R27
+!s107 E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Material/Third Year/First term/VLSI/VLSI-Project/modules/testbench.v|
+!i113 1
+R5
+R6
