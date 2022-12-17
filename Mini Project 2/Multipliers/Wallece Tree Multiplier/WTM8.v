@@ -1,19 +1,13 @@
 module WTM8(A, B, Result);
 
-    input [7:0] A, B;
+    input [7:0] A;
+    input [7:0] B;
     output [15:0] Result;
-
-    // wire [7:0] A, B;
-	// wire [15:0] Result;
 
     wire [7:0] P [7:0];
 
     wire [63:1] C;
     wire [53:1] S;
-
-    // assign A = (a[7] == 1)? ((~a) + 1) : a;
-    // assign B = (b[7] == 1)? ((~b) + 1) : b;
-
 
     genvar i;
     genvar j;
@@ -110,8 +104,5 @@ module WTM8(A, B, Result);
     FA F45(S[52], C[51], C[61], Result[13], C[62]);
     FA F46(S[53], C[52], C[62], Result[14], C[63]);
     assign Result[15] = C[53];
-
-    // assign out = ((a[7] == 1) ^ (b[7] == 1))? (~Result + 1) : Result;
-      
 	 
 endmodule

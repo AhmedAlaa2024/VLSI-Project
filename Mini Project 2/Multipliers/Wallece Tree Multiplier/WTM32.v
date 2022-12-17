@@ -92,6 +92,7 @@ adder64 A13(Quadruple[2], Quadruple[3], Eight[1], Carry[13]);
 
 adder64 A14(Eight[0], Eight[1], out, Carry[14]);
 
+// Handle the signess
 assign Result = ((A[31] == 1) ^ (B[31] == 1))? (~out + 1) : out;
 
 endmodule
