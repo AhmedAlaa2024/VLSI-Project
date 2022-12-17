@@ -769,7 +769,7 @@ module full_adder(i_bit1, i_bit2, i_carry, o_sum, o_carry);
    INV_X1 i_0_3 (.A(n_0_0), .ZN(o_carry));
 endmodule
 
-module ripple_adder(i_add1, i_add2, o_result, OF);
+module ripple_adder_1(i_add1, i_add2, o_result, OF);
    input [7:0]i_add1;
    input [7:0]i_add2;
    output [8:0]o_result;
@@ -957,7 +957,7 @@ module CIA(A, B, cin, sum, cout, OF);
       .cout(n_0_19), .sumin({n_0_17, n_0_16, n_0_15, n_0_14, n_0_13, n_0_12, 
       n_0_11, n_0_10}), .sumout({sum[23], sum[22], sum[21], sum[20], sum[19], 
       sum[18], sum[17], sum[16]}));
-   ripple_adder__0_209 genblk1_3_RCA (.i_add1({A[31], A[30], A[29], A[28], A[27], A[26], 
+   ripple_adder_1 genblk1_3_RCA (.i_add1({A[31], A[30], A[29], A[28], A[27], A[26], 
       A[25], A[24]}), .i_add2({B[31], B[30], B[29], B[28], B[27], B[26], B[25], 
       B[24]}), .o_result({n_0_28, n_0_27, n_0_26, n_0_25, n_0_24, n_0_23, n_0_22, 
       n_0_21, n_0_20}), .OF());
