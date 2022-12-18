@@ -62,3 +62,63 @@ run 100 ps
 # Result = 16.40625
 puts "41834000"
 puts [examine -radix hex FPM/Result]
+
+puts "========================== Case 6 =========================="
+# A = 0.0
+force FPM/A				32'h00000000
+# B = 3.125
+force FPM/B				32'h40480000
+
+run 100 ps
+
+# Result = 0
+puts "00000000"
+puts [examine -radix hex FPM/Result]
+
+puts "========================== Case 7 =========================="
+# A = 1.0
+force FPM/A				32'h3f800000
+# B = 3.125
+force FPM/B				32'h40480000
+
+run 100 ps
+
+# Result = 3.125
+puts "40480000"
+puts [examine -radix hex FPM/Result]
+
+puts "========================== Case 8 =========================="
+# A = 0.0
+force FPM/A				32'h00000000
+# B = -3.125
+force FPM/B				32'hc0480000
+
+run 100 ps
+
+# Result = 0
+puts "00000000"
+puts [examine -radix hex FPM/Result]
+
+puts "========================== Case 9 =========================="
+# A = 1.0
+force FPM/A				32'h3f800000
+# B = -3.125
+force FPM/B				32'hc0480000
+
+run 100 ps
+
+# Result = -3.125
+puts "c0480000"
+puts [examine -radix hex FPM/Result]
+
+puts "========================== Case 10 =========================="
+# A = 0.0
+force FPM/A				32'h00000000
+# B = 0.0
+force FPM/B				32'h00000000
+
+run 100 ps
+
+# Result = 0.0
+puts "00000000"
+puts [examine -radix hex FPM/Result]

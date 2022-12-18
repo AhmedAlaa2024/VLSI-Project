@@ -25,6 +25,7 @@ assign Zero = (A == 32'b0) || (B == 32'b0);
 /* Calculate the mantissa of the result by multiplying the 2 mantisses of the 2 operands */
 assign A_Mantissa[23:0] = (8'b0 | A[30:23]) ? {1'b1,A[22:0]} : {1'b0,A[22:0]};          // Add the leading one in case exponent is not zero
 assign B_Mantissa[23:0] = (8'b0 | B[30:23]) ? {1'b1,B[22:0]} : {1'b0,B[22:0]};          // Add the leading one in case exponent is not zero
+
 assign Product = A_Mantissa * B_Mantissa;
 
 /* Normalize the result */
