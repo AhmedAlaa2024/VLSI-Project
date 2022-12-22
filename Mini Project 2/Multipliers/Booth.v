@@ -21,7 +21,7 @@ module Booth #(parameter N=4)(clk, rst, m, q, P);
         2'b10: A = A - M;
         //default: A = A;
       endcase 
-      {A, Q, q1} = signed'({A, Q, q1}) >>> 1;
+      {A, Q, q1} = $signed({A, Q, q1}) >>> 1;
       n = n-1;
     end else begin
       P = {A, Q};
