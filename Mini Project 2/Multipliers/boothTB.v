@@ -1,15 +1,15 @@
 module TB;
-  localparam N = 8;
+  localparam N = 32;
   localparam T = 100;
   
   reg clk, rst;
-  reg [N-1: 0] m, q;
-  reg [2*N-1: 0] result;
+  reg signed [N-1: 0] m, q;
+  reg signed [2*N-1: 0] result;
 
-  wire [2*N-1: 0] P;
+  wire [2*N-1: 0] P_kiro, P_khaled;
 
-  Booth #(N) booth_multiplier (clk, rst, m, q, P);
-
+  //Radix4Booth #(N) booth_multiplier (m, q, P_khaled);
+  Booth #(N) booth_multiplier_1 (clk, rst, m, q, P_kiro);
 
   always #(T/2) clk = ~clk;
 
@@ -17,26 +17,78 @@ module TB;
     clk=1;
 
     rst=1;
-    m = 8'b01111101; //125
-    q = 8'b00100110; //38
+    m = 6546; 
+    q = -12; 
     #100;
     rst=0;
-    #(8*100)
-    result = 16'b0001_0010_1000_1110; //4750
+    #(16*100)
+    result = m*q; 
     #100
 
     rst=1;
-    m = 8'b10100001; //-95
-    q = 8'b00100110; //38
+    m = 234; 
+    q = 3452; 
     #100;
     rst=0;
-    #(8*100)
-    result = 16'b1111_0001_1110_0110; //-3610
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = -500; 
+    q = -200; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = -123; 
+    q = 30; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = 234; 
+    q = 0; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = 1; 
+    q = 3452; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = 4532; 
+    q = 3452; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
+    #100
+
+    rst=1;
+    m = 1122; 
+    q = 3452; 
+    #100;
+    rst=0;
+    #(N*100)
+    result = m*q; 
     #100
 
     rst = 0;
-
-    //$display("clk %d rst %d opcode %d src %d dst %d shiftamount %d regWrite %d WD %d WA_3 %d Rsrc_out_2 %d Rdst_out_2 %d Imm_out_2 %d MEM_signals_out_2 %p EX_signals_out_2 %p WB_signals_out_2,flags_out,ALU_Out_2 %p %d",clk, rst, opcode,src,dst,shiftamount, regWrite, WD, WA_3, Rsrc_out_2, Rdst_out_2,Imm_out_2, MEM_signals_out_2, EX_signals_out_2, WB_signals_out_2,flags_out,ALU_Out_2); 
   end
 
 endmodule

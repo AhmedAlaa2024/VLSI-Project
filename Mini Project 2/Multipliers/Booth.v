@@ -14,7 +14,7 @@ module Booth #(parameter N=4)(clk, rst, m, q, P);
       q1 = 0;
       M = m;
       Q = q;
-      P = 0;
+      //P = 0;
     end else if(n > 0) begin
       case ({Q[0], q1})
         2'b01: A = A + M;
