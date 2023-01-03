@@ -30,6 +30,8 @@ wire											  cond;
 wire		[23:0]								  Opd1;
 wire		[23:0]								  Opd2;
 
+wire dummy;
+
 /************************* Enable Signals *************************/
 // This enable signals in case we want to apply pipeline concepts
 wire		[2:0]			  					  mux_es;
@@ -50,7 +52,7 @@ subMinus #(8) subtractor (A[30:23], B[30:23], shmat, borrow);
 assign A_mantissa[23:0] = (borrow == 1'b1)?((A[30:23] == 8'b0)?   {1'b0,A[22:0]}:{1'b1,A[22:0]})  :   (   (B[30:23] == 8'b0)?   {1'b0,B[22:0]}:{1'b1,B[22:0]});
 assign Temp_Sign1 = (borrow==1'b1)?A[31]:B[31];
 assign B_mantissa[23:0] = (borrow == 1'b0)?((A[30:23] == 8'b0)?{1'b0,A[22:0]}:{1'b1,A[22:0]}):((B[30:23] == 8'b0)?{1'b0,B[22:0]}:{1'b1,B[22:0]});
-assign Temp_Sign2 = (borrow==1'b1)? A[31]:B[31];
+assign Temp_Sign2 = (borrow==1'b0)? A[31]:B[31];
 
 // mux23 mux_1 (.in1(A[22:0]), .in2(B[22:0]), .out(A_mantissa[22:0]), .sel(borrow), .enable(1'b1));
 // mux #(1) mux_2 (A[31], B[31], Temp_Sign1, borrow, 1'b1);
@@ -61,10 +63,9 @@ assign Temp_Sign2 = (borrow==1'b1)? A[31]:B[31];
 assign cond = (A[31] ^ B[31]);
 
 
+//ControlledShiftRegister #(8, MANTISSA_LENGTH+1) ShiftRegister (B_mantissa, B_mantissa_shifted, controlledShiftRegister_es, controlledShiftRegister_dir_s, shmat, controlledShiftRegister_reset_s, Temp_Sign2);
+assign B_mantissa_shifted = B_mantissa >> shmat;
 
-
-
-ControlledShiftRegister #(8, MANTISSA_LENGTH+1) ShiftRegister (B_mantissa, B_mantissa_shifted, controlledShiftRegister_es, controlledShiftRegister_dir_s, shmat, controlledShiftRegister_reset_s, Temp_Sign2);
 
 assign Opd1 = (cond & Temp_Sign1)? ((~A_mantissa)+1) : A_mantissa;
 assign Opd2 = (cond & Temp_Sign2)? ((~B_mantissa_shifted)+1) : B_mantissa_shifted;
@@ -74,13 +75,16 @@ adderPlus #(24) adder (Opd1, Opd2, Temp_sum ,Temp_carry);
 
 //assign Cout = Temp_carry;
 
+assign Opd2 = (cond & Temp_Sign2)? ((~B_mantissa_shifted)+1) : B_mantissa_shifted;
 
 assign Temp_exponent = (borrow==1'b1)? A[30:23]:B[30:23];
 //mux	#(8) mux_5 (.in1(A[30:23]), .in2(B[30:23]), .out(Temp_exponent), .sel(borrow), .enable(1'b1));
 
-assign Final_Sum[22:0]=(Temp_carry==1'b1)?Temp_sum[23:1]:Temp_sum[22:0];
-assign Final_Sum[30:23]=(Temp_carry==1'b1)?Temp_exponent+1'b1:Temp_exponent;
+assign Final_Sum[22:0]=(~cond)?(Temp_carry)?Temp_sum[23:1]:Temp_sum[22:0]:23'bz;
+assign Final_Sum[30:23]=(~cond)?(Temp_carry)?Temp_exponent+1'b1:Temp_exponent:8'bz;
 //NormalizerAndRounder #(8, 24) normalizerAndRounder (.oldMantissa(Final_Sum[23:0]), .oldExponent(Temp_exponent), .newMantissa(Temp_mantissa), .newExponent(Sum[30:23]), .carry(Cout), .shmat(shmat));
+priority_encoder pe({Temp_carry,Temp_sum[22:0]},Temp_exponent,{dummy,Final_Sum[22:0]},Final_Sum[30:23],cond);
+
 
 // assign Sum[MANTISSA_LENGTH] = Temp_Carry;
 assign Sum[30:0] = Final_Sum[30:0];

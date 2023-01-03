@@ -1,4 +1,4 @@
-vlog subMinus.v ControlledShiftRegister.v adderPlus.v NormalizerAndRounder.v FPA.v
+vlog subMinus.v ControlledShiftRegister.v adderPlus.v Normalizer.v FPA.v 
 vsim  FPA
 
 add wave -color Green     -radix bin FPA/A
@@ -9,9 +9,6 @@ add wave -color Magenta     -radix bin FPA/A_mantissa
 add wave -color Magenta    -radix bin FPA/B_mantissa
 
 add wave -color Magenta      -radix bin FPA/borrow
-add wave -color Magenta   -radix bin /FPA/ShiftRegister/data_in
-add wave -color Magenta   -radix bin /FPA/ShiftRegister/data_out
-add wave -color Magenta   -radix unsigned /FPA/ShiftRegister/steps
 
 add wave -color Magenta   -radix bin /FPA/adder/inputA
 add wave -color Magenta   -radix bin /FPA/adder/inputB
