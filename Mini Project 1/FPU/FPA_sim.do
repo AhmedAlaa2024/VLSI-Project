@@ -1,4 +1,4 @@
-vlog subMinus.v mux.v ControlledShiftRegister.v adderPlus.v NormalizerAndRounder.v FPA.v
+vlog subMinus.v ControlledShiftRegister.v adderPlus.v NormalizerAndRounder.v FPA.v
 vsim  FPA
 
 add wave -color Green     -radix bin FPA/A
@@ -25,11 +25,11 @@ add wave -color Magenta   -radix bin FPA/Final_Sum
 # add wave -color Magenta   -radix bin /FPA/adder/cout
 # add wave -color Magenta   -radix bin /FPA/adder/OF
 
-add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/carry
-add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/oldExponent
-add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/oldMantissa
-add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/newExponent
-add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/newMantissa
+#add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/carry
+#add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/oldExponent
+#add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/oldMantissa
+#add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/newExponent
+#add wave -color Magenta   -radix bin /FPA/normalizerAndRounder/newMantissa
 puts "========================== Case 1 =========================="
 # A = 3.125
 force FPA/A				32'h40480000
